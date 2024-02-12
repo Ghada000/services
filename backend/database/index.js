@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
     database: 'trade' //database name imported from the config files
   });
 
-  connection.connect(()=>console.log('db connected'))
+  connection.connect(()=>console.log('db connected yeeeeeeeeeeey'))
 // Connect to the database and make sure to log a message related to the connection state 
 
 module.exports=connection
