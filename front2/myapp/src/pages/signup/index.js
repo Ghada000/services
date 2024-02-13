@@ -34,7 +34,6 @@ function SignIn() {
       <div className="sign-in-container">
         <form onSubmit={handleSubmit} className="sign-in-form">
           <div className="input-group">
-            <label htmlFor="email" className="input-label">Email:</label>
             <input
               type="email"
               id="email"
@@ -45,7 +44,6 @@ function SignIn() {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password" className="input-label">Password:</label>
             <input
               type="password"
               id="password"
