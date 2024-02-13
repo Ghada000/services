@@ -1,7 +1,7 @@
 'use client'
 import  { useState } from 'react';
 
-function signup() {
+function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -47,10 +47,10 @@ function signup() {
             required
           />
         </div>
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign up</button>
       </form>
     </div>
   );
 }
 
-export default signup;
+export default SignIn;
