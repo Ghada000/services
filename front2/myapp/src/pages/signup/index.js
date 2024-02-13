@@ -1,5 +1,6 @@
-'use client'
-import  { useState } from 'react';
+import { useState } from 'react';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { authh } from "./firebaseConfig";
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -13,13 +14,16 @@ function SignIn() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can add your logic to handle form submission,
-    // for example, sending the email and password to a server
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // You can reset the input fields after submission if needed
+    try {
+      const userCredential = await createUserWithEmailAndPassword(authh, email, password);
+      const user = userCredential.user;
+      console.log('User signed up:', user);
+      // You can redirect the user to another page or perform any other actions upon successful sign-up
+    } catch (error) {
+      console.error('Error signing up:', error.message);
+    }
     setEmail('');
     setPassword('');
   };
