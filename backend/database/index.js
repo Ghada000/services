@@ -14,3 +14,4 @@ const connection = mysql.createConnection({
 // Connect to the database and make sure to log a message related to the connection state 
 
 module.exports=connection
+ 
