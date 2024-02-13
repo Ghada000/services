@@ -1,56 +1,65 @@
-'use client'
-import  { useState } from 'react';
-
+import { useState } from 'react';
+import { signInWithEmailAndPassword  } from "firebase/auth";
+import { authh } from "./firebaseConfig";
+import './style.css'
 function SignIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can add your logic to handle form submission,
-    // for example, sending the email and password to a server
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // You can reset the input fields after submission if needed
-    setEmail('');
-    setPassword('');
-  };
-
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            required
-          />
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+  
+    const handleEmailChange = (e) => {
+      setEmail(e.target.value);
+    };
+  
+    const handlePasswordChange = (e) => {
+      setPassword(e.target.value);
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const userCredential = await signInWithEmailAndPassword(authh, email, password);
+        const user = userCredential.user;
+        console.log('User signed in:', user);
+        // You can redirect the user to another page or perform any other actions upon successful sign-in
+      } catch (error) {
+        console.error('Error signing in:', error.message);
+      }
+      // Clear the email and password fields after sign-in attempt
+      setEmail('');
+      setPassword('');
+    };
+  
+    return (
+        <div className="sign-in-container">
+          <form onSubmit={handleSubmit} className="sign-in-form">
+            <div className="input-group">
+              <label htmlFor="email" className="input-label">Email:</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                className="input-field"
+                placeholder="Your email address"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="password" className="input-label">Password:</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
+                className="input-field"
+                placeholder="Your password"
+                required
+              />
+            </div>
+            <button type="submit" className="submit-button">Sign In</button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </div>
-        <button type="submit">Sign In</button>
-      </form>
-    </div>
-  );
+    );
 }
 
 export default SignIn;

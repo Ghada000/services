@@ -1,10 +1,10 @@
-'useclient'
+'use client'
 import React from 'react'
 import Link from 'next/link'
 export default function navbar() {
   return (
     <nav>
-      <ul style={{"display":"flex","":"" }}>
+      <ul style={{"display":"flex","jus":"" }}>
         <li>
           <Link href="/">home
           </Link>
