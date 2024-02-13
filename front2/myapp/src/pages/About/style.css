@@ -1,130 +1,159 @@
-/* Global Styles */
+/* Add these styles to your style.css file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #2b2b2b;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #2b2b2b;
+  border: 2px solid #ffcc00;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffbf00;
+  border-color: #ffbf00;
+  color: #fff;
+}
+
+.about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #2b2b2b;
-    color: #fff;
-  }
-  
-  header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-  }
-  
-  header p {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  
-  button {
-    padding: 8px 16px; /* Adjusted padding for smaller size */
-    background-color: #ffcc00;
-    color: #2b2b2b;
-    border: 2px solid #ffcc00;
-    border-radius: 30px;
-    font-size: 1.4rem; /* Adjusted font size */
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #ffbf00;
-    border-color: #ffbf00;
-    color: #fff;
-  }
-  
-  .about-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-  }
-  
-  .text-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .text-content h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .image-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .image-content img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .services {
-    text-align: center;
-    margin-top: 120px;
-  }
-  
-  .services h2 {
-    font-size: 3.5rem;
-    margin-bottom: 80px;
-  }
-  
-  .service-content {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .service {
-    flex: 1;
-    padding: 40px;
-    margin: 0 30px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .service:hover {
-    transform: translateY(-10px);
-  }
-  
-  .service img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .service h3 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .service p {
-    font-size: 2rem;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 120px;
-    color: #2b2b2b;
-  }
-  
-  footer p {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
+}
+
+.text-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.image-content {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.image-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://c1.wallpaperflare.com/preview/200/369/276/technology-developer-continents-touch.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-content:hover::before {
+  opacity: 0.8;
+  transform: scale(1.2) rotate(5deg);
+}
+
+.services {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.services h2 {
+  font-size: 4rem;
+  margin-bottom: 80px;
+}
+
+.service-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.service {
+  flex: 1;
+  padding: 40px;
+  margin: 0 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.service p {
+  font-size: 2rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 120px;
+  color: #2b2b2b;
+}
+
+footer p {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}

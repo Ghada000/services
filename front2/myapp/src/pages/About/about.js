@@ -27,10 +27,10 @@ const About = () => {
             <div className="service-details">
               <img src="https://img.lovepik.com/element/45007/4787.png_860.png" alt="Service 1" />
               <div className="description">
-                <h3>HandiWork</h3>
-                <p>Discover the artistry of craftsmanship with our meticulously curated DIY tutorials, designed to elevate your home projects to a level of unmatched sophistication.</p>
               </div>
             </div>
+                <h3>HandiWork</h3>
+                <p>Discover the artistry of craftsmanship with our meticulously curated DIY tutorials, designed to elevate your home projects to a level of unmatched sophistication.</p>
           </div>
           <div className="service">
             <div className="service-details">
