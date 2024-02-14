@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarHome from '../../components/navbarhome';
 
-const home = ({ user, signOut }) => {
+const Home = ({ user, signOut }) => {
   return (
     <div>
       <NavbarHome user={user} signOut={signOut} />
@@ -25,4 +25,4 @@ const home = ({ user, signOut }) => {
   );
 };
 
-export default home;
+export default Home;

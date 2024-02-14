@@ -21,25 +21,16 @@ const About = () => {
       </section>
 
       <section className="services">
+      <div className="container">
+     
+      <section className="services">
         <h2>Our Services</h2>
         <div className="service-content">
           <div className="service">
-            <div className="service-details">
-              <img src="https://img.lovepik.com/element/45007/4787.png_860.png" alt="Service 1" />
-              <div className="description">
-              </div>
-            </div>
-                <h3>HandiWork</h3>
-                <p>Discover the artistry of craftsmanship with our meticulously curated DIY tutorials, designed to elevate your home projects to a level of unmatched sophistication.</p>
+            <img src="https://e7.pngegg.com/pngimages/862/830/png-clipart-computer-icons-clothing-swap-arrow-art-angle-triangle.png" alt="Service 1" />
           </div>
           <div className="service">
-            <div className="service-details">
-              <img src="/images/service2.jpg" alt="Service 2" />
-              <div className="description">
-                <h3>HandMade</h3>
-                <p>Indulge in opulence with our collection of handcrafted masterpieces, meticulously created to adorn your living space with unparalleled elegance and style.</p>
-              </div>
-            </div>
+            <img src="/images/service2.jpg" alt="Service 2" />
           </div>
         </div>
       </section>
@@ -48,6 +39,8 @@ const About = () => {
         <p>Contact us: info@example.com</p>
         <p>Follow us on social media: @example</p>
       </footer>
+    </div>
+      </section>
     </div>
   );
 };

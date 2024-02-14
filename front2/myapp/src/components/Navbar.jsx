@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SignUp from '../pages/signup'; // Import your signup component here
 import SignIn from '../pages/signin'; 
 import { MdPerson } from "react-icons/md";
-import { BsPersonFillUp } from "react-icons/bs";
+import { IoEnter } from "react-icons/io5";
 
 import './nav.css'
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="nav-buttons">
             <ul>
               <li>
-                <BsPersonFillUp onClick={toggleSignUp} size={35}/>
+                <IoEnter onClick={toggleSignUp} size={35}/>
 
               </li>
               <li>
