@@ -1,23 +1,28 @@
 import Link from 'next/link';
+import styles from './NavServices.css'; // Adjust path based on your project structure
 
-
-const Navbar = () => {
+const NavbarServices = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         <li>
-          <Link href="/housekeepingPage">
-            <a>Housekeeping</a>
+          <Link href="/HouseKeeping">
+            Housekeeping
           </Link>
         </li>
         <li>
-          <Link href="/babysittingPage">
-            <a>Babysitting</a>
+          <Link href="/Babysitting">
+            Babysitting
           </Link>
         </li>
         <li>
-          <Link href="/seniorPage">
-            <a>Senior Assistance</a>
+          <Link href="/Senior">
+            Senior Assistance
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            About
           </Link>
         </li>
       </ul>
@@ -25,4 +30,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarServices;
