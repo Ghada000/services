@@ -20,11 +20,7 @@ const NavbarServices = () => {
             Senior Assistance
           </Link>
         </li>
-        <li>
-          <Link href="/about">
-            About
-          </Link>
-        </li>
+       
       </ul>
     </nav>
   );

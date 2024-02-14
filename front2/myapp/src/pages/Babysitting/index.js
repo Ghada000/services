@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 
 function BabySittingPage() {
@@ -32,7 +34,7 @@ function BabySittingPage() {
 
   const handleAddService = async () => {
     try {
-      const response = await fetch('http://localhost:5000/services', {
+      const response = await fetch('http://localhost:5000/services/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -117,22 +119,23 @@ function BabySittingPage() {
       </form>
 
       {/* Render the list of services */}
-      {data.map((item) => (
-        <div key={item.id}> 
-          <h1>{item.service_date}</h1>
-          <h1>{item.location}</h1>
-          <h1>{item.price}</h1>
-          <h1>{item.service_date}</h1>
-          <h1>{item.feedbacks}</h1>
-          <h1>{item.rating}</h1>
-          <h1>{item.username}</h1>
-          <h1>{item.description}</h1>
-          {/* Add buttons for update and delete */}
-          <button onClick={() => handleDeleteService(item.id)}>Delete</button>
-          {/* You can add a modal or another form to update the service */}
-          <button onClick={() => handleUpdateService(item.id, updatedService)}>Update</button>
-        </div>
-      ))}
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {data.map((item) => (
+          <div key={item.id} style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '16px', margin: '16px', width: '300px' }}>
+            <h1>{item.service_date}</h1>
+            <p>Location: {item.location}</p>
+            <p>Price: {item.price}</p>
+            <p>Feedbacks: {item.feedbacks}</p>
+            <p>Rating: {item.rating}</p>
+            <p>Username: {item.username}</p>
+            <p>Description: {item.description}</p>
+            {/* Add buttons for update and delete */}
+            <button onClick={() => handleDeleteService(item.id)}>Delete</button>
+            {/* You can add a modal or another form to update the service */}
+            <button onClick={() => handleUpdateService(item.id, updatedService)}>Update</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
