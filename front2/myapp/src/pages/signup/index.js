@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { authh } from "./firebaseConfig";
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import "./style.css"
 function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const router = useRouter();
+    // const router = useRouter();
     const handleEmailChange = (e) => {
       setEmail(e.target.value);
     };
@@ -20,7 +20,7 @@ function SignIn() {
       try {
         const userCredential = await createUserWithEmailAndPassword(authh, email, password);
         const user = userCredential.user;
-        router.push('/signin');
+        // router.push('/home');
         console.log('User signed up:', user);
         // You can redirect the user to another page or perform any other actions upon successful sign-up
       } catch (error) {

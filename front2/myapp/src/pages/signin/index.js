@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { signInWithEmailAndPassword  } from "firebase/auth";
 import { authh } from "./firebaseConfig";
+import { useRouter } from 'next/navigation';
+import Home from '../home/home.jsx'
 import './style.css'
 function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-  
+    const router = useRouter();
+
     const handleEmailChange = (e) => {
       setEmail(e.target.value);
     };
@@ -20,6 +23,8 @@ function SignIn() {
         const userCredential = await signInWithEmailAndPassword(authh, email, password);
         const user = userCredential.user;
         console.log('User signed in:', user);
+        router.push('/Home');
+
         // You can redirect the user to another page or perform any other actions upon successful sign-in
       } catch (error) {
         console.error('Error signing in:', error.message);
