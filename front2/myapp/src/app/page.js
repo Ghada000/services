@@ -6,7 +6,7 @@ import Home from "@/pages/home/home.jsx";
 export default function test() {
   return (
     <>
-   <Home/>
+   {/* <Home/> */}
    <Navbar/>
    <About/>
    
