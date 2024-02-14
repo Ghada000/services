@@ -4,8 +4,7 @@ import Link from 'next/link';
 import SignUp from '../pages/signup'; // Import your signup component here
 import SignIn from '../pages/signin'; 
 import { MdPerson } from "react-icons/md";
-import { IoEnter } from "react-icons/io5";
-
+import { BsBookmarkPlusFill } from "react-icons/bs";
 import './nav.css'
 export default function Navbar() {
   const [showSignUp, setShowSignUp] = useState(false);
@@ -27,10 +26,10 @@ export default function Navbar() {
         <div className="nav-buttons">
           <ul>
             <li>
-              <IoEnter onClick={toggleSignUp} size={35}/>
+              <BsBookmarkPlusFill onClick={toggleSignUp} size={35}/>
             </li>
             <li>
-              <MdPerson onClick={toggleSignIn} size={35}/>
+              <MdPerson onClick={toggleSignIn} size={32}/>
             </li>
           </ul>
         </div>
