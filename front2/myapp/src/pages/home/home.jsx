@@ -17,6 +17,7 @@ const Home = ({ user }) => {
     }
   };
 
+const home = ({ user, signOut }) => {
   return (
     <div>
       <NavbarHome user={user} signOut={handleSignOut} />
@@ -41,4 +42,4 @@ const Home = ({ user }) => {
   );
 };
 
-export default Home;
+export default home;

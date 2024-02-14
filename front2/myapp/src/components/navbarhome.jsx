@@ -6,19 +6,25 @@ const NavbarHome = ({ user, signOut }) => {
     <nav>
       <div>
         <Link href="/home">
-          <a>Home</a>
+          {/* Instead of using <a>, style the link using CSS */}
+          <span className="nav-link">Home</span>
         </Link>
         <Link href="/services">
-          <a>Services</a>
+          <span className="nav-link">Services</span>
         </Link>
         <Link href="/goods">
-          <a>Goods</a>
+          <span className="nav-link">Goods</span>
         </Link>
       </div>
       <div>
-        <img src={user.profilePicture} alt="Profile Picture" />
-        <span>{user.name}</span>
-        <button onClick={signOut}>Sign Out</button>
+        {/* Check if user exists before accessing its properties */}
+        {user && (
+          <>
+            <img src={user.profilePicture} alt="Profile Picture" />
+            <span>{user.name}</span>
+            <button onClick={signOut}>Sign Out</button>
+          </>
+        )}
       </div>
     </nav>
   );
