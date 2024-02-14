@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 function HouseKeepingPage() {
   const [data, setData] = useState([]);
-  const [newService, setNewService] = useState({
+
+  const [updateService, setUpdateService] = useState({
+    id: null,
     service_type: '',
     service_date: '',
     location: '',
@@ -33,41 +35,10 @@ function HouseKeepingPage() {
       });
   };
 
-  const handleAddService = () => {
-    fetch('http://localhost:5000/services', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newService)
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to add service');
-        }
-        return response.json();
-      })
-      .then(responseData => {
-        console.log(responseData);
-        fetchData();
-        setNewService({
-          service_type: '',
-          service_date: '',
-          location: '',
-          price: '',
-          feedbacks: '',
-          rating: '',
-          username: '',
-          description: ''
-        });
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
+
 
   const handleDeleteService = (id) => {
-    fetch(`http://localhost:5000/services/${id}`, {
+    fetch(`http://localhost:5000/api/services/${id}`, {
       method: 'DELETE'
     })
       .then(response => {
@@ -86,7 +57,7 @@ function HouseKeepingPage() {
   };
 
   const handleUpdateService = (id, updatedService) => {
-    fetch(`http://localhost:5000/services/${id}`, {
+    fetch(`http://localhost:5000/api/services/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -101,16 +72,30 @@ function HouseKeepingPage() {
       })
       .then(responseData => {
         console.log(responseData);
-        fetchData();
+        fetchData(); // Fetch updated data after successful update
+        setUpdateService({ // Reset updateService state
+          id: null,
+          service_type: '',
+          service_date: '',
+          location: '',
+          price: '',
+          feedbacks: '',
+          rating: '',
+          username: '',
+          description: ''
+        });
       })
       .catch(error => {
         console.log(error);
       });
   };
+  
 
-  const handleChange = (e) => {
+
+
+  const handleUpdateInputChange = (e) => {
     const { name, value } = e.target;
-    setNewService(prevState => ({
+    setUpdateService(prevState => ({
       ...prevState,
       [name]: value
     }));
@@ -118,18 +103,7 @@ function HouseKeepingPage() {
 
   return (
     <div>
-      {/* Render the form for adding a new service */}
-      <form onSubmit={handleAddService}>
-        <input type="text" name="service_type" value={newService.service_type} onChange={handleChange} placeholder="Service Type" />
-        <input type="text" name="service_date" value={newService.service_date} onChange={handleChange} placeholder="Service Date" />
-        <input type="text" name="location" value={newService.location} onChange={handleChange} placeholder="Location" />
-        <input type="text" name="price" value={newService.price} onChange={handleChange} placeholder="Price" />
-        <input type="text" name="feedbacks" value={newService.feedbacks} onChange={handleChange} placeholder="Feedbacks" />
-        <input type="text" name="rating" value={newService.rating} onChange={handleChange} placeholder="Rating" />
-        <input type="text" name="username" value={newService.username} onChange={handleChange} placeholder="Username" />
-        <input type="text" name="description" value={newService.description} onChange={handleChange} placeholder="Description" />
-        <button type="submit">Add Service</button>
-      </form>
+    
 
       {/* Render the list of services */}
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -144,8 +118,46 @@ function HouseKeepingPage() {
             <p>Description: {item.description}</p>
             {/* Add buttons for update and delete */}
             <button onClick={() => handleDeleteService(item.id)}>Delete</button>
-            {/* You can add a modal or another form to update the service */}
-            <button onClick={() => handleUpdateService(item.id, updatedService)}>Update</button>
+            {/* Update button triggers the openUpdateForm function */}
+            <button onClick={() => setUpdateService({
+              id: item.id,
+              service_type: item.service_type,
+              service_date: item.service_date,
+              location: item.location,
+              price: item.price,
+              feedbacks: item.feedbacks,
+              rating: item.rating,
+              username: item.username,
+              description: item.description
+            })}>Update</button>
+            {/* Conditional rendering of update form */}
+            {updateService.id === item.id && (
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                handleUpdateService(item.id, updateService);
+              }}>
+                <input type="text" name="service_type" value={updateService.service_type} onChange={handleUpdateInputChange} placeholder="Service Type" />
+                <input type="text" name="service_date" value={updateService.service_date} onChange={handleUpdateInputChange} placeholder="Service Date" />
+                <input type="text" name="location" value={updateService.location} onChange={handleUpdateInputChange} placeholder="Location" />
+                <input type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
+                <input type="text" name="feedbacks" value={updateService.feedbacks} onChange={handleUpdateInputChange} placeholder="Feedbacks" />
+                <input type="text" name="rating" value={updateService.rating} onChange={handleUpdateInputChange} placeholder="Rating" />
+                <input type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
+                <input type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
+                <button type="submit">Save</button>
+                <button type="button" onClick={() => setUpdateService({
+                  id: null,
+                  service_type: '',
+                  service_date: '',
+                  location: '',
+                  price: '',
+                  feedbacks: '',
+                  rating: '',
+                  username: '',
+                  description: ''
+                })}>Cancel</button>
+              </form>
+            )}
           </div>
         ))}
       </div>
