@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 function HouseKeepingPage() {
   const [data, setData] = useState([]);
 
@@ -9,8 +10,6 @@ function HouseKeepingPage() {
     service_date: '',
     location: '',
     price: '',
-    feedbacks: '',
-    rating: '',
     username: '',
     description: ''
   });
@@ -78,9 +77,7 @@ function HouseKeepingPage() {
           service_type: '',
           service_date: '',
           location: '',
-          price: '',
-          feedbacks: '',
-          rating: '',
+          price: '', 
           username: '',
           description: ''
         });
@@ -112,8 +109,6 @@ function HouseKeepingPage() {
             <h1>{item.service_date}</h1>
             <p>Location: {item.location}</p>
             <p>Price: {item.price}</p>
-            <p>Feedbacks: {item.feedbacks}</p>
-            <p>Rating: {item.rating}</p>
             <p>Username: {item.username}</p>
             <p>Description: {item.description}</p>
             {/* Add buttons for update and delete */}
@@ -125,8 +120,7 @@ function HouseKeepingPage() {
               service_date: item.service_date,
               location: item.location,
               price: item.price,
-              feedbacks: item.feedbacks,
-              rating: item.rating,
+             
               username: item.username,
               description: item.description
             })}>Update</button>
@@ -140,8 +134,8 @@ function HouseKeepingPage() {
                 <input type="text" name="service_date" value={updateService.service_date} onChange={handleUpdateInputChange} placeholder="Service Date" />
                 <input type="text" name="location" value={updateService.location} onChange={handleUpdateInputChange} placeholder="Location" />
                 <input type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
-                <input type="text" name="feedbacks" value={updateService.feedbacks} onChange={handleUpdateInputChange} placeholder="Feedbacks" />
-                <input type="text" name="rating" value={updateService.rating} onChange={handleUpdateInputChange} placeholder="Rating" />
+                
+                
                 <input type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
                 <input type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
                 <button type="submit">Save</button>
@@ -151,8 +145,6 @@ function HouseKeepingPage() {
                   service_date: '',
                   location: '',
                   price: '',
-                  feedbacks: '',
-                  rating: '',
                   username: '',
                   description: ''
                 })}>Cancel</button>

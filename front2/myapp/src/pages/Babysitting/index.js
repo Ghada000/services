@@ -9,8 +9,7 @@ function BabySittingPage() {
     service_date: '',
     location: '',
     price: '',
-    feedbacks: '',
-    rating: '',
+   
     username: '',
     description: ''
   });
@@ -69,8 +68,7 @@ function BabySittingPage() {
         service_date: '',
         location: '',
         price: '',
-        feedbacks: '',
-        rating: '',
+      
         username: '',
         description: ''
       });
@@ -100,8 +98,7 @@ function BabySittingPage() {
             <h1>{item.service_date}</h1>
             <p>Location: {item.location}</p>
             <p>Price: {item.price}</p>
-            <p>Feedbacks: {item.feedbacks}</p>
-            <p>Rating: {item.rating}</p>
+        
             <p>Username: {item.username}</p>
             <p>Description: {item.description}</p>
             {/* Add buttons for update and delete */}
@@ -118,8 +115,7 @@ function BabySittingPage() {
                 <input type="text" name="service_date" value={updateService.service_date} onChange={handleUpdateInputChange} placeholder="Service Date" />
                 <input type="text" name="location" value={updateService.location} onChange={handleUpdateInputChange} placeholder="Location" />
                 <input type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
-                <input type="text" name="feedbacks" value={updateService.feedbacks} onChange={handleUpdateInputChange} placeholder="Feedbacks" />
-                <input type="text" name="rating" value={updateService.rating} onChange={handleUpdateInputChange} placeholder="Rating" />
+            
                 <input type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
                 <input type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
                 <button type="submit">Save</button>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './NavServices.css'; // Adjust path based on your project structure
+import styles from './NavServices.css'; 
 
 const NavbarServices = () => {
   return (
