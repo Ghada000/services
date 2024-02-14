@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `trade`.`goods` (
   `image_url` VARCHAR(255) NULL DEFAULT NULL,
   PRIMARY KEY (`good_id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -43,7 +43,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `trade`.`services`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `trade`.`services` (
-  `service_id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `service_type` VARCHAR(255) NULL DEFAULT NULL,
   `service_date` DATE NULL DEFAULT NULL,
   `location` VARCHAR(255) NULL DEFAULT NULL,
@@ -52,9 +52,9 @@ CREATE TABLE IF NOT EXISTS `trade`.`services` (
   `rating` FLOAT NULL DEFAULT NULL,
   `username` VARCHAR(100) NULL DEFAULT NULL,
   `description` TEXT NULL DEFAULT NULL,
-  PRIMARY KEY (`service_id`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -62,8 +62,3 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-<<<<<<< HEAD
-=======
-schema.sql
-3 KB
->>>>>>> 87dc30d0b2b1f9247cd798fc7988d1e718c58541
