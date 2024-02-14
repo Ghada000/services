@@ -1,0 +1,72 @@
+/* style.css */
+
+/* Container styles */
+.sign-up-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form styles */
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input field styles */
+  .input-group {
+    margin-bottom: 25px;
+  }
+  
+  .input-label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .input-field {
+    padding: 15px;
+    font-size: 16px;
+    color: #555;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #007bff;
+  }
+  
+  /* Submit button styles */
+  .submit-button {
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #ffea00;
+    color: #ffea00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2100b3;
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  /* Success message styles */
+  .success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  

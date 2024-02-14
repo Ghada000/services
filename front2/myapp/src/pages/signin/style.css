@@ -1,0 +1,52 @@
+/* style.css */
+
+/* Container styles */
+.sign-in-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    
+  }
+  
+ 
+  .sign-in-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input field styles */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-label {
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Submit button styles */
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
