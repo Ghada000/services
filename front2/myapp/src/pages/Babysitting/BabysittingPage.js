@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+const useClient = dynamic(() => import('next/client').then(mod => mod.useClient), { ssr: false });
+
 
 function BabySittingPage() {
+  // Mark the component as a Client Component
+  useClient();
+
   const [data, setData] = useState([]);
   const [newService, setNewService] = useState({
     service_type: '',
@@ -115,4 +120,4 @@ function BabySittingPage() {
   );
 }
 
-export default BabySittingPage ;
+export default BabySittingPage;
