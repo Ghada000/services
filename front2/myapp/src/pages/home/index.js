@@ -41,5 +41,5 @@ const Home = ({ user, signOut }) => {
     </div>
   );
 };
-
+}
 export default Home;
