@@ -7,8 +7,7 @@ export default function test() {
   return (
     <>
    <Home/>
-   <Navbar/>
-   <About/>
+   
    
     </>
   );
