@@ -78,9 +78,9 @@ function BabySittingPage() {
     }
   };
 
-  const handlePostComment = async (serviceId, commentText) => {
+  const handlePostComment = async (service_id, commentText) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/services/${serviceId}/comments`, {
+      const response = await fetch(`http://localhost:5000/api/services/${service_id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -142,6 +142,8 @@ function BabySittingPage() {
                 <button type="button" onClick={() => setUpdateService({ ...item })}>Cancel</button>
               </form>
             )}
+                <p>COMMENTS</p>
+
             <form onSubmit={(e) => handleCommentSubmit(e, item.id)}>
   <input type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
   <button type="submit">Post</button>
@@ -149,6 +151,7 @@ function BabySittingPage() {
             {/* Display comments */}
             {item.comments && item.comments.map((comment) => (
               <div key={comment.comment_id}>
+                {console.log("comment",comment)}
                 <p>{comment.comment_text}</p>
                 <p>{comment.timestamp}</p>
               </div>

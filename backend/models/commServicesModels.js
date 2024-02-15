@@ -1,7 +1,13 @@
 const connection = require("../database/index");
 
 module.exports = {
-  getAllComments: function(serviceId, callback) {
+  getAllComments: function( callback) {
+    const sql = 'SELECT * FROM comments'
+    connection.query(sql, function(error, results) {
+      callback(error, results);
+    });
+  },
+  getCommentById: function(serviceId, callback) {
     const sql = 'SELECT * FROM comments WHERE service_id = ?';
     connection.query(sql, [serviceId], function(error, results) {
       callback(error, results);
