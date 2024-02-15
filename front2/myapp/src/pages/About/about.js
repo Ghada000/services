@@ -36,9 +36,20 @@ const About = () => {
       </section>
 
       <footer>
-        <p>Contact us: info@example.com</p>
-        <p>Follow us on social media: @example</p>
-      </footer>
+  <div class="footer-container">
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <p>Contact us: info@example.com</p>
+  <p>Follow us on social media: @example</p>
+</footer>
     </div>
       </section>
     </div>
