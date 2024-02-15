@@ -9,6 +9,5 @@ router.post('/services', posted);
 router.delete('/services/:id', deleted);
 router.put('/services/:id', put);
 
-router.get('/services/:service_id/comments', getComments);
-router.post('/services/:service_id/comments', postComment);
+
 module.exports = router;
