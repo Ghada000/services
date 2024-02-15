@@ -1,44 +1,53 @@
+/* NavbarHome.css */
 nav {
-    background-color: #2b2b2b; /* Dark background */
-    padding: 10px 20px; /* Padding for the navbar */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* Position navbar relative for absolute positioning */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.4rem; /* Font size for links */
-    transition: color 0.3s ease;
-    margin-right: 20px; /* Space between links */
-  }
-  
-  a:hover {
-    color: #ffcc00; /* Hover color */
-  }
-  
-  .home-link {
-    color: #fff; /* Home link color */
-    font-size: 1.6rem; /* Larger font size for home link */
-    font-weight: bold; /* Bold font weight */
-    margin-right: auto; /* Pushes the home link to the left */
-  }
-  
-  .nav-buttons {
-    display: flex;
-    align-items: center;
-  }
-  .nav-cont{
-    position: relative;
-  }
+  background-color: #2b2b2b;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+.home-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons li {
+  margin-right: 10px;
+}
+
+.nav-buttons svg:hover {
+  fill: #ffcc00;
+  cursor: pointer;
+}
