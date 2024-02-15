@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'; // Assuming you have a CSS module file for styles
-// pages/about.jsx
+
 const About = () => {
   return (
     <div className="container">
@@ -16,38 +16,42 @@ const About = () => {
           <p>We are the epitome of refinement and exclusivity. Our platform connects individuals and businesses seeking the epitome of service excellence with those offering it, ensuring an unparalleled level of sophistication and luxury.</p>
         </div>
         <div className="image-content">
-          <img src="https://c1.wallpaperflare.com/preview/200/369/276/technology-developer-continents-touch.jpg" alt="Our Team" />
+          <img className src="https://c1.wallpaperflare.com/preview/200/369/276/technology-developer-continents-touch.jpg"  alt="Our Team" />
         </div>
       </section>
 
       <section className="services">
-        <h2>Our Services</h2>
+      <div className="container">
+     
+      <section className="services">
+        <h2 className='x'>Our Services</h2>
         <div className="service-content">
           <div className="service">
-            <div className="service-details">
-              <img src="https://img.lovepik.com/element/45007/4787.png_860.png" alt="Service 1" />
-              <div className="description">
-              </div>
-            </div>
-                <h3>HandiWork</h3>
-                <p>Discover the artistry of craftsmanship with our meticulously curated DIY tutorials, designed to elevate your home projects to a level of unmatched sophistication.</p>
+            <img  className='img1'  src="https://e7.pngegg.com/pngimages/862/830/png-clipart-computer-icons-clothing-swap-arrow-art-angle-triangle.png" alt="Service 1" />
           </div>
           <div className="service">
-            <div className="service-details">
-              <img src="/images/service2.jpg" alt="Service 2" />
-              <div className="description">
-                <h3>HandMade</h3>
-                <p>Indulge in opulence with our collection of handcrafted masterpieces, meticulously created to adorn your living space with unparalleled elegance and style.</p>
-              </div>
-            </div>
+            <img className='img2' src="/images/service2.jpg" alt="Service 2" />
           </div>
         </div>
       </section>
 
       <footer>
-        <p>Contact us: info@example.com</p>
-        <p>Follow us on social media: @example</p>
-      </footer>
+  <div class="footer-container">
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="footer-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <p>Contact us: info@example.com</p>
+  <p>Follow us on social media: @example</p>
+</footer>
+    </div>
+      </section>
     </div>
   );
 };
