@@ -2,7 +2,7 @@ const connection = require("../database/index");
 
 module.exports = {
   getAllComments: function( callback) {
-    const sql = 'SELECT * FROM comments'
+    const sql = 'SELECT * FROM `comments`'
     connection.query(sql, function(error, results) {
       callback(error, results);
     });

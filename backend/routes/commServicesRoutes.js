@@ -1,9 +1,9 @@
 
 const express = require("express");
 const router = express.Router();
-const { getComments, postComment } = require('../controllers/commServicesControllers');
+const { getComments, postComment ,getCommentsId} = require('../controllers/commServicesControllers');
 
-router.get('/services/:service_id', getComments);
-router.post('/services/:service_id', postComment);
-
+router.get('/comments/:service_id', getCommentsId);
+router.get('/comments' ,getComments)
+router.post('/comments/:service_id', postComment);
 module.exports = router;

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
+import axios from "axios"
 
 function HouseKeepingPage() {
   const [data, setData] = useState([]);
+  const [comment, setComment] = useState([]);
+
 
   const [updateService, setUpdateService] = useState({
     id: null,
@@ -16,8 +18,21 @@ function HouseKeepingPage() {
 
   useEffect(() => {
     fetchData();
+    fetchComments()
   }, []);
 
+
+
+
+  const fetchComments = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/comments');
+      setComment(response.data);
+      console.log("comments ❤️❤️❤️❤️", response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   const fetchData = () => {
     fetch('http://localhost:5000/api/services/House%20keeping')
       .then(response => {

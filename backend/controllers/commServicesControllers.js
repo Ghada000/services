@@ -1,8 +1,18 @@
-const { getAllComments, postComment: addComment } = require('../models/commServicesModels');
+const { getAllComments,getCommentById, postComment: addComment } = require('../models/commServicesModels');
 
-const getComments = function(req, res) {
+const getCommentsId = async function(req, res) {
     const { service_id } = req.params;
-    getAllComments(service_id, function(err, results) {
+   await getCommentById(service_id, function(err, results) {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.json(results);
+      }
+    });
+  };
+  const getComments = async function(req, res) {
+   
+   await getAllComments( function(err, results) {
       if (err) {
         res.status(500).send(err);
       } else {
@@ -25,5 +35,6 @@ const getComments = function(req, res) {
   
   module.exports = {
     getComments,
-    postComment
+    postComment, 
+    getCommentsId
   };

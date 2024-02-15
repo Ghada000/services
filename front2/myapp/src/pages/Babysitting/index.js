@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-
+import  axios  from 'axios';
+console.log("hello");
 function BabySittingPage() {
   const [data, setData] = useState([]);
+  const [comment, setComment] = useState([]);
   const [newComment, setNewComment] = useState('');
-;
   const [updateService, setUpdateService] = useState({
     id: null,
     service_type: '',
     service_date: '',
     location: '',
     price: '',
-   
     username: '',
     description: ''
   });
 
   useEffect(() => {
-    fetchData();
+    fetchData()
+    fetchComments();
   }, []);
 
   const fetchData = async () => {
@@ -32,7 +33,33 @@ function BabySittingPage() {
     }
   };
 
- 
+  // const fetchComments = async () => {
+  //   try {
+  //     const response = await fetch(`http://localhost:5000/api/comments`);
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch comments');
+  //     }
+  //     const comments = await response.json();
+  //     const newData = data.map(item => {
+  //       if (item.id === id) {
+  //         return { ...item, comments };
+  //       }
+  //       return item;
+  //     });
+  //     setData(newData);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  const fetchComments = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/comments');
+      setComment(response.data);
+      console.log("comments ❤️❤️❤️❤️", response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   const handleDeleteService = async (id) => {
     try {
@@ -69,7 +96,6 @@ function BabySittingPage() {
         service_date: '',
         location: '',
         price: '',
-      
         username: '',
         description: ''
       });
@@ -90,7 +116,7 @@ function BabySittingPage() {
       if (!response.ok) {
         throw new Error('Failed to post comment');
       }
-      fetchData(); // Fetch data again to update comments
+      fetchComments(service_id); // Fetch comments again to update comments
       setNewComment('');
     } catch (error) {
       console.log(error);
@@ -114,6 +140,7 @@ function BabySittingPage() {
     e.preventDefault();
     handlePostComment(serviceId, newComment);
   };
+
   return (
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -142,16 +169,16 @@ function BabySittingPage() {
                 <button type="button" onClick={() => setUpdateService({ ...item })}>Cancel</button>
               </form>
             )}
-                <p>COMMENTS</p>
-
             <form onSubmit={(e) => handleCommentSubmit(e, item.id)}>
-  <input type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
-  <button type="submit">Post</button>
-</form>
+              <input type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
+              <button type="submit">Post</button>
+            </form>
+            <p>COMMENTS</p>
             {/* Display comments */}
-            {item.comments && item.comments.map((comment) => (
+            {comment&&comment
+            .filter(e=>e.service_id===item.id)
+            .map((comment) => (
               <div key={comment.comment_id}>
-                {console.log("comment",comment)}
                 <p>{comment.comment_text}</p>
                 <p>{comment.timestamp}</p>
               </div>
