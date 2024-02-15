@@ -1,12 +1,13 @@
+// routes/goodsRoutes.js
+
 const express = require("express");
 const router = express.Router();
-const {get,deleted,put,posted} =require  ('../controllers/goodsControllers')
+const { get, deleted, put, posted, getByType } = require('../controllers/goodsControllers');
 
+router.get('/goods', get);
+router.get('/goods/:goodType', getByType);
+router.post('/goods/post', posted);
+router.delete('/goods/delete/:id', deleted);
+router.put('/goods/update/:id', put);
 
-
-  router.get('/get',get)
-  router.post('/post',posted)
-  router.delete('/delete/:id',deleted)
-  router.put('/put/:id',put)
-
-  module.exports=router
+module.exports = router;

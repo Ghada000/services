@@ -1,4 +1,4 @@
-const   {getAll,post,deleteacc,updateacc} =require  ('../models/goodsModels')
+const   {getAll,post,deleteacc,updateacc,getByGoodType} = require('../models/goodsModels')
 
 
 const get = function(req, res) {
@@ -9,7 +9,21 @@ const get = function(req, res) {
     })
   } 
   
+  const getByType = function (req, res) {
+    const goodType = req.params.goodType;
+    console.log('Requested good type:', goodType);
   
+    getByGoodType(goodType, function (err, results) {
+      if (err) {
+        console.error('Error fetching goods by good_type:', err);
+        res.status(500).send(err);
+      } else {
+        console.log('Goods by Good Type:', results);
+        res.json(results);
+      }
+    });
+  };
+      
   const posted=( function(req, res) {
   
     const accData = req.body; 
@@ -42,6 +56,4 @@ const get = function(req, res) {
       }
     });
   }); 
-  module.exports={
-    get,deleted,put,posted
-  }
+  module.exports={ get , getByType , put , posted , deleted }
