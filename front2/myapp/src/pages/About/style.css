@@ -154,10 +154,11 @@ button:hover {
 footer {
   text-align: center;
   margin-top: 120px;
-  color: #2b2b2b;
+  color: #d3d3d3;
 }
 
 footer p {
   font-size: 2rem;
   margin-bottom: 40px;
+  
 }
