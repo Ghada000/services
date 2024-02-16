@@ -32,15 +32,7 @@ const NavbarHome = ({ user }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.navButtons} style={{"backgroundColor":"red"}}>
-        {user1 && (
-          <>
-            <img src={user1.Identifier} alt="Profile Picture" />
-            <span>{user1.name}</span>
-            <button onClick={handleSignOut}>Sign Out</button>
-          </>
-        )}
-      </div>
+    
     </nav>
   );
 };
