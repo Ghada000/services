@@ -1,71 +1,45 @@
 /* style.css */
 
-/* Container styles */
-.sign-up-container {
-  max-width: 500px;
-  margin: 40px auto; /* Adjust the margin to center the form */
-  padding: 40px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.sign-in-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
-  /* Form styles */
-  .sign-up-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Input field styles */
-  .input-group {
-    margin-bottom: 25px;
-  }
-  
-  .input-label {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 8px;
-  }
-  
-  .input-field {
-    padding: 15px;
-    font-size: 16px;
-    color: #555;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-field:focus {
-    border-color: #007bff;
-  }
-  
-  /* Submit button styles */
-  .submit-button {
-    padding: 15px 20px;
-    font-size: 18px;
-    background-color: #ffea00;
-    color: #ffea00;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:hover {
-    background-color: #2100b3;
-  }
-  
-  /* Error message styles */
-  .error-message {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  
-  /* Success message styles */
-  .success-message {
-    color: #28a745;
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Optional: Style for error messages */
+.error-message {
+  color: red;
+  margin-top: 5px;
+}

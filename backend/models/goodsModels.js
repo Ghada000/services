@@ -7,8 +7,13 @@ module.exports = {
         connection.query(sql, function (error, results, fields) {
           callback(error, results);
     })},
-
-    post: function (accData, callback) {
+    getByGoodType: (goodType, callback) => {
+      const sql = 'SELECT * FROM `goods` WHERE `good_type` = ?';
+      connection.query(sql, [goodType], function (error, results, fields) {
+        callback(error, results);
+      });
+    },
+      post: function (accData, callback) {
       const sql = 'INSERT INTO `goods` SET ? ';
       connection.query(sql, accData, function (error, results, fields) {
         if (error) {

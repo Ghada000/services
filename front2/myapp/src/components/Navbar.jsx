@@ -29,7 +29,7 @@ export default function Navbar() {
               <BsBookmarkPlusFill onClick={toggleSignUp} size={35}/>
             </li>
             <li>
-              <MdPerson onClick={toggleSignIn} size={32}/>
+              <MdPerson onClick={toggleSignIn} size={24}/>
             </li>
           </ul>
         </div>
