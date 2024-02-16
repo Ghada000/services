@@ -5,6 +5,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import styles from './navhome.css'; 
 
 const NavbarHome = ({ user }) => {
+ 
   const handleSignOut = async () => {
     const auth = getAuth(); 
     try {
@@ -15,7 +16,7 @@ const NavbarHome = ({ user }) => {
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} >
       <div>
         <Link href="/home">
           <span className={styles.homeLink}>Home</span> 
@@ -33,11 +34,11 @@ const NavbarHome = ({ user }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.navButtons}>
-        {user && (
+      <div className={styles.navButtons} style={{"backgroundColor":"red"}}>
+        {user1 && (
           <>
-            <img src={user.Identifier} alt="Profile Picture" />
-            <span>{user.name}</span>
+            <img src={user1.Identifier} alt="Profile Picture" />
+            <span>{user1.name}</span>
             <button onClick={handleSignOut}>Sign Out</button>
           </>
         )}
