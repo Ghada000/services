@@ -35,7 +35,7 @@ const Home = () => {
           <p>Join TradeHub today and discover a new way to exchange goods and services in your community!</p>
         </div>
       </footer>
-    </div>
+      </div>
   );
 };
 
