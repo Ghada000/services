@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import  axios  from 'axios';
-console.log("hello");
+
 function BabySittingPage() {
   const [data, setData] = useState([]);
   const [comment, setComment] = useState([]);
@@ -33,24 +33,6 @@ function BabySittingPage() {
     }
   };
 
-  // const fetchComments = async () => {
-  //   try {
-  //     const response = await fetch(`http://localhost:5000/api/comments`);
-  //     if (!response.ok) {
-  //       throw new Error('Failed to fetch comments');
-  //     }
-  //     const comments = await response.json();
-  //     const newData = data.map(item => {
-  //       if (item.id === id) {
-  //         return { ...item, comments };
-  //       }
-  //       return item;
-  //     });
-  //     setData(newData);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   const fetchComments = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/comments');
@@ -106,7 +88,7 @@ function BabySittingPage() {
 
   const handlePostComment = async (service_id, commentText) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/services/${service_id}`, {
+      const response = await fetch(`http://localhost:5000/api/comments/${service_id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
