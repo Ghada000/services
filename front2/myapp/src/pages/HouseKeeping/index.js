@@ -32,7 +32,7 @@ function HouseKeepingPage() {
   };
 
   const fetchData = () => {
-    fetch('http://localhost:5000/api/services/House%20keeping')
+    fetch('http://localhost:5000/api/services/Housekeeping')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch data');
