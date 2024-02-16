@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const cors = require('cors')
-const goodsRouter = require('./routes/goodsRoutes')
 const serviceRouter=require ('./routes/servicesRoutes')
 const commentsRouter=require ('./routes/commServicesRoutes')
+const goodsRouter = require ('./routes/goodsRoutes')
 
 app.use(cors())
 app.use(express.json())
