@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css'; // Assuming you have a CSS module file for styles
-
 const About = () => {
   return (
     <div className="container">

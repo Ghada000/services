@@ -10,7 +10,7 @@ const Exchange = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/get?good_type=exchange');
+        const response = await fetch('http://localhost:5000/api/goods/exchange');
         if (response.ok) {
           const result = await response.json();
           setData(result);

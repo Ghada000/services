@@ -1,24 +1,18 @@
-/* exchange.module.css */
+/* exchange.css */
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .item {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
-  
-  .item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .item p {
-    margin: 5px 0;
-  }
-  
+.item {
+  border: 1px solid #ddd; /* Add a border to separate items */
+  padding: 10px; /* Add some padding to each item */
+  margin: 10px; /* Add margin to create space between items */
+  display: inline-block; /* Display items in a line */
+  width: 200px; /* Set a fixed width for each item box */
+}
+
+/* Optional: Add some styling for the item content */
+.item img {
+  max-width: 100%; /* Make sure images don't exceed the container width */
+}
+
+.item p {
+  margin: 5px 0; /* Add margin to paragraphs within the item */
+}

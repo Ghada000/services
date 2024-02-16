@@ -3,16 +3,16 @@ const app = express();
 const PORT = 5000;
 const cors = require('cors')
 const serviceRouter=require ('./routes/servicesRoutes')
-const goodRoutes = require('./routes/goodsRoutes')
+const commentsRouter=require ('./routes/commServicesRoutes')
+const goodsRouter = require ('./routes/goodsRoutes')
+
 app.use(cors())
 app.use(express.json())
 
 
-
-
 app.use('/api',serviceRouter)
-
-app.use('/api',goodRoutes)
+app.use('/api',goodsRouter)
+app.use('/api',commentsRouter)
 
 
 app.listen(PORT, () => {

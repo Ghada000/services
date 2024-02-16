@@ -10,7 +10,7 @@ const get = function(req, res) {
   } 
   
   const getByType = function (req, res) {
-    const goodType = req.params.goodType;
+    const goodType = req.params.goodtype;
     console.log('Requested good type:', goodType);
   
     getByGoodType(goodType, function (err, results) {
