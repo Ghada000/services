@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css'
 
 function AddPage() {
   const [newService, setNewService] = useState({
@@ -6,8 +7,7 @@ function AddPage() {
     service_date: '',
     location: '',
     price: '',
-    feedbacks: '',
-    rating: '',
+  
     username: '',
     description: ''
   });
@@ -43,8 +43,7 @@ function AddPage() {
           service_date: '',
           location: '',
           price: '',
-          feedbacks: '',
-          rating: '',
+         
           username: '',
           description: ''
         });
@@ -61,8 +60,6 @@ function AddPage() {
         <input type="text" name="service_date" value={newService.service_date} onChange={handleChange} placeholder="Service Date" />
         <input type="text" name="location" value={newService.location} onChange={handleChange} placeholder="Location" />
         <input type="text" name="price" value={newService.price} onChange={handleChange} placeholder="Price" />
-        <input type="text" name="feedbacks" value={newService.feedbacks} onChange={handleChange} placeholder="Feedbacks" />
-        <input type="text" name="rating" value={newService.rating} onChange={handleChange} placeholder="Rating" />
         <input type="text" name="username" value={newService.username} onChange={handleChange} placeholder="Username" />
         <input type="text" name="description" value={newService.description} onChange={handleChange} placeholder="Description" />
         <button type="submit">Add Service</button>
