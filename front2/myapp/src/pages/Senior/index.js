@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './style.css'
 function SeniorPage() {
   const [data, setData] = useState([]);
   const [newComment, setNewComment] = useState('');

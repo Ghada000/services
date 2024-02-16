@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import  axios  from 'axios';
-
+import './style.css'
 function BabySittingPage() {
   const [data, setData] = useState([]);
   const [comment, setComment] = useState([]);
