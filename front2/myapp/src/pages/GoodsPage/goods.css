@@ -18,7 +18,7 @@ body {
 .goods-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
 }
 
 .goods-header {
@@ -46,47 +46,55 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-
 .goods-image {
   width: 100%;
-  height: 200px;
+  height: 40%;
+  -o-object-fit: cover;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.goods-image:hover {
+  transform: scale(1.1); /* Enlarge image on hover */
 }
 
 .goods-content {
   padding: 20px;
+  height: 40%; /* Adjust height of the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .goods-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .goods-description {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #bbb;
   margin-bottom: 15px;
 }
 
 .goods-price {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #ffcc00;
   font-weight: bold;
 }
 
 /* Button */
 .button {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #ffcc00;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 58%;
+    padding: 10px 0;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
