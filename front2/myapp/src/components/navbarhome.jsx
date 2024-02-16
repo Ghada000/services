@@ -17,9 +17,7 @@ const NavbarHome = ({ user }) => {
   return (
     <nav className={styles.nav}>
       <div>
-        <Link href="/home">
-          <span className={styles.homeLink}>Home</span> 
-        </Link>
+       
         <ul className={styles.navLinks}>
           <li>
             <Link href="/services">
