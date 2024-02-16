@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../components/Navbar.jsx";
-import About from '../pages/About/index.js'
-import NavbarGoods from "@/components/navbarGoods.jsx";
+import NavbarGoods from "../components/navbarGoods";
+import Navbar from "@/components/Navbar";
+import About from "../pages/About/index.js"
 // import Home from "@/pages/home/home.jsx";
 export default function test() {
   return (

@@ -21,6 +21,11 @@ const NavbarGoods = () => {
             Home
           </Link>
         </li>
+        <li>
+          <Link href="/addexchange">
+            add exchange product 
+          </Link>
+        </li>
       </ul>
     </nav>
   );
