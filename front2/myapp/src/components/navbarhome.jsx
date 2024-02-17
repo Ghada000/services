@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getAuth, signOut } from 'firebase/auth'; 
-import styles from './navhome.css'; 
+import styles from './nav.css'; 
 
 const NavbarHome = ({ user }) => {
  
@@ -32,15 +32,7 @@ const NavbarHome = ({ user }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.navButtons} style={{"backgroundColor":"red"}}>
-        {user1 && (
-          <>
-            <img src={user1.Identifier} alt="Profile Picture" />
-            <span>{user1.name}</span>
-            <button onClick={handleSignOut}>Sign Out</button>
-          </>
-        )}
-      </div>
+    
     </nav>
   );
 };
