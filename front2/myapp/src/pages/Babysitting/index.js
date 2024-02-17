@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import  axios  from 'axios';
-
+import './style.css'
 function BabySittingPage() {
   const [data, setData] = useState([]);
   const [comment, setComment] = useState([]);
@@ -141,18 +141,18 @@ function BabySittingPage() {
                 e.preventDefault();
                 handleUpdateService(item.id);
               }}>
-                <input type="text" name="service_type" value={updateService.service_type} onChange={handleUpdateInputChange} placeholder="Service Type" />
-                <input type="text" name="service_date" value={updateService.service_date} onChange={handleUpdateInputChange} placeholder="Service Date" />
-                <input type="text" name="location" value={updateService.location} onChange={handleUpdateInputChange} placeholder="Location" />
-                <input type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
-                <input type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
-                <input type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
-                <button type="submit">Save</button>
+                <input className='ghada' type="text" name="service_type" value={updateService.service_type} onChange={handleUpdateInputChange} placeholder="Service Type" />
+                <input className='ghada' type="text" name="service_date" value={updateService.service_date} onChange={handleUpdateInputChange} placeholder="Service Date" />
+                <input  className='ghada' type="text" name="location" value={updateService.location} onChange={handleUpdateInputChange} placeholder="Location" />
+                <input className='ghada' type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
+                <input className='ghada' type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
+                <input className='ghada' type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
+                <button  type="submit">Save</button>
                 <button type="button" onClick={() => setUpdateService({ ...item })}>Cancel</button>
               </form>
             )}
             <form onSubmit={(e) => handleCommentSubmit(e, item.id)}>
-              <input type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
+              <input className='douda'  type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
               <button type="submit">Post</button>
             </form>
             <p>COMMENTS</p>

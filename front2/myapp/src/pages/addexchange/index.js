@@ -3,7 +3,6 @@ import axios from 'axios';
 
 function Addproduct() {
   const [formData, setFormData] = useState({
-    good_type: '',
     location: '',
     price: '',
     username: '',
@@ -65,7 +64,6 @@ function Addproduct() {
       const imageUrl = responseCloudinary.data.secure_url;
 
       const postData = {
-        good_type: formData.good_type,
         location: formData.location,
         price: formData.price,
         username: formData.username,
@@ -77,7 +75,6 @@ function Addproduct() {
 
       console.log('Product added successfully:', response.data);
       setFormData({
-        good_type: '',
         location: '',
         price: '',
         username: '',
@@ -93,21 +90,6 @@ function Addproduct() {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="good_type" className="form-label">
-            Good Type
-          </label>
-          <input
-            type="text"
-            id="good_type"
-            name="good_type"
-            value={formData.good_type}
-            onChange={handleChange}
-            className="dd"
-            placeholder="Enter good type"
-          />
-        </div>
-
         <div className="form-group">
           <label htmlFor="location" className="form-label">
             Location

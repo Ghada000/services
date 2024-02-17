@@ -22,7 +22,7 @@ const NavbarServices = () => {
         </li>
         <li>
           <Link href="/AddService">
-            Add 
+            Add a new service
           </Link>
         </li>
        

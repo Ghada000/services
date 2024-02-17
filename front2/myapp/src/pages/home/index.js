@@ -10,7 +10,10 @@ const Home = () => {
         <div className="container">
           <h1>Welcome to TradeHub!</h1>
           <p>TradeHub is your go-to platform for exchanging goods and services temporarily. Whether you have something you no longer need or require a service for a short period, TradeHub connects you with others in your community for mutually beneficial trades.</p>
-          <button>Get Started</button>
+          {/* Use a mailto link to open the user's default email client */}
+          <a href="mailto:assidighada4@gmail.com">
+            <button>Contact us</button>
+          </a>
         </div>
       </header>
       <section className="about-details">
@@ -35,7 +38,7 @@ const Home = () => {
           <p>Join TradeHub today and discover a new way to exchange goods and services in your community!</p>
         </div>
       </footer>
-      </div>
+    </div>
   );
 };
 
