@@ -38,7 +38,6 @@ function index() {
               <button className="button">Shop Now</button>
             </div>
           </div>
-          {/* Add more goods cards as needed */}
         </div>
       </div>
     </div>
