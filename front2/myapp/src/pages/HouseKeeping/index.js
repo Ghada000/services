@@ -146,7 +146,7 @@ function HouseKeepingPage() {
             <p>Price: {item.price}</p>
             <p>Username: {item.username}</p>
             <p>Description: {item.description}</p>
-            <button onClick={() => handleDeleteService(item.id)}>Delete</button>
+            <button onClick={() => handleDeleteService(item.id)}>🗑️</button>
             <button onClick={() => setUpdateService({
               id: item.id,
               service_type: item.service_type,
@@ -155,7 +155,7 @@ function HouseKeepingPage() {
               price: item.price,
               username: item.username,
               description: item.description
-            })}>Update</button>
+            })}>♻️</button>
             {updateService.id === item.id && (
               <form onSubmit={(e) => {
                 e.preventDefault();
@@ -167,7 +167,7 @@ function HouseKeepingPage() {
                 <input className='ghada' type="text" name="price" value={updateService.price} onChange={handleUpdateInputChange} placeholder="Price" />
                 <input className='ghada' type="text" name="username" value={updateService.username} onChange={handleUpdateInputChange} placeholder="Username" />
                 <input className='ghada' type="text" name="description" value={updateService.description} onChange={handleUpdateInputChange} placeholder="Description" />
-                <button type="submit">Save</button>
+                <button type="submit">✅</button>
                 <button type="button" onClick={() => setUpdateService({
                   id: null,
                   service_type: '',
@@ -176,12 +176,12 @@ function HouseKeepingPage() {
                   price: '',
                   username: '',
                   description: ''
-                })}>Cancel</button>
+                })}>❌</button>
               </form>
             )}
             <form onSubmit={(e) => handleCommentSubmit(e, item.id)}>
               <input className='douda'  type="text" value={newComment} onChange={handleCommentInputChange} placeholder="Add a comment" />
-              <button type="submit">Post</button>
+              <button type="submit"> ➕ </button>
             </form>
             <p>COMMENTS</p>
             {comment && comment
