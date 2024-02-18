@@ -142,10 +142,10 @@ function HouseKeepingPage() {
         {data.map((item) => (
           <div key={item.id} style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '16px', margin: '16px', width: '300px' }}>
             <h1>{item.service_date}</h1>
-            <p>Location: {item.location}</p>
-            <p>Price: {item.price}</p>
-            <p>Username: {item.username}</p>
-            <p>Description: {item.description}</p>
+            <p className='titre'>Location:  <br/>{item.location}</p>
+            <p className='titre' >Price: <br/>{item.price}</p>
+            <p className='titre'>Username: <br/>{item.username}</p>
+            <p className='titre'>Description: <br/> {item.description}</p>
             <button onClick={() => handleDeleteService(item.id)}>🗑️</button>
             <button onClick={() => setUpdateService({
               id: item.id,
