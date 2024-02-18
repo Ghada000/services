@@ -6,13 +6,13 @@ function index() {
     <div>
       <NavbarGoods />
       <div className="container">
+        <div className="goods-header">
+          <h1>Welcome to Our Goods Page</h1>
+          <p>Explore our curated selection of exceptional goods designed to elevate your lifestyle.</p>
+        </div>
         <div className="goods-container">
-          <div className="goods-header">
-            <h1>Welcome to Our Goods Page</h1>
-            <p>Explore our curated selection of exceptional goods designed to elevate your lifestyle.</p>
-          </div>
           <div className="goods-card">
-            <img className="goods-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGeggmz-qr-ZePU_voD614Rhv0Dl6oRkkjsGv6YYtKsw&s" alt="Good 1" />
+            <img className="goods-image" src="https://c4.wallpaperflare.com/wallpaper/164/653/243/clock-detail-jewelry-luxury-wallpaper-preview.jpg" alt="Elegant Timepiece" />
             <div className="goods-content">
               <h2 className="goods-title">Elegant Timepiece</h2>
               <p className="goods-description">Indulge in timeless luxury with our exquisite collection of elegant timepieces. Crafted with precision and attention to detail, each watch is a masterpiece of craftsmanship and style.</p>
@@ -21,7 +21,7 @@ function index() {
             </div>
           </div>
           <div className="goods-card">
-            <img className="goods-image" src="path_to_image_2" alt="Good 2" />
+            <img className="goods-image" src="https://c0.wallpaperflare.com/preview/19/890/506/black-gucci-leather-shoulder-bag.jpg" alt="Luxurious Leather Bag" />
             <div className="goods-content">
               <h2 className="goods-title">Luxurious Leather Bag</h2>
               <p className="goods-description">Elevate your fashion ensemble with our luxurious leather bags. Handcrafted from the finest materials, these bags exude sophistication and refinement, making them a perfect companion for any occasion.</p>
@@ -30,7 +30,7 @@ function index() {
             </div>
           </div>
           <div className="goods-card">
-            <img className="goods-image" src="path_to_image_3" alt="Good 3" />
+            <img className="goods-image" src="https://cdn11.bigcommerce.com/s-e6kwfh/images/stencil/590x590/products/33457/85687/default_Side-headphones__04809.1577485689.jpg?c=2" alt="Premium Headphones" />
             <div className="goods-content">
               <h2 className="goods-title">Premium Headphones</h2>
               <p className="goods-description">Experience unparalleled sound quality with our premium headphones. Designed for audiophiles, these headphones deliver crystal-clear audio and unmatched comfort, ensuring an immersive listening experience every time.</p>
@@ -40,6 +40,19 @@ function index() {
           </div>
         </div>
       </div>
+      <div className="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form className="newsletter-form">
+          <input type="email" placeholder="Your Email Address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <footer className="footer">
+        <div className="footer-content">
+          <p>Contact us: info@example.com</p>
+          <p>Follow us on social media: @example</p>
+        </div>
+      </footer>
     </div>
   );
 }
