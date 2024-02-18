@@ -6,13 +6,14 @@ const NavbarGoods = () => {
   return (
     <nav>
       <ul>
+       
         <li>
           <Link href="/exchange">
             Exchange
           </Link>
         </li>
         <li>
-          <Link href="/goods/borrow">
+          <Link href="/borrow">
             Borrow
           </Link>
         </li>
@@ -22,8 +23,8 @@ const NavbarGoods = () => {
           </Link>
         </li>
         <li>
-          <Link href="/addexchange">
-            add exchange product 
+          <Link href="/addProduct">
+            add product 
           </Link>
         </li>
       </ul>

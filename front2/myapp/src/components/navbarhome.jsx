@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getAuth, signOut } from 'firebase/auth'; 
-import styles from './navhome.css'; 
+import styles from './nav.css'; 
 
 const NavbarHome = ({ user }) => {
  

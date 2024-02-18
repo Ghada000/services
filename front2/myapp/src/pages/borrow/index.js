@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import NavbarGoods from '@/components/navbarGoods';
 import axios from 'axios';
-import './exchange.css';  // Import the updated CSS file
+import './style.css';  // Import the updated CSS file
 
-const Exchange = () => {
+const borrow = () => {
   const [data, setData] = useState([]);
   const [updateFormVisible, setUpdateFormVisible] = useState(false);
   const [updatedInfo, setUpdatedInfo] = useState({
@@ -19,7 +19,7 @@ const Exchange = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/goods/exchange');
+        const response = await axios.get('http://localhost:5000/api/goods/borrow');
 
         if (response.status === 200) {
           setData(response.data);
@@ -151,4 +151,4 @@ const Exchange = () => {
   );
 };
 
-export default Exchange;
+export default borrow;

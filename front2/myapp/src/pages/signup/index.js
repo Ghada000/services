@@ -121,8 +121,8 @@ function SignIn() {
         </div>
         <button type="submit" className="submit-button">Sign up</button>
       </form>
-      <button onClick={handleGoogleSignUp} className="google-sign-up-button">Sign up with Google</button>
-      <button onClick={handleFacebookSignUp} className="facebook-sign-up-button">Sign up with Facebook</button>
+      <button onClick={handleGoogleSignUp} className="submit-button">Sign up with Google</button>
+      <button onClick={handleFacebookSignUp} className="submit-button">Sign up with Facebook</button>
     </div>
   );
 }
