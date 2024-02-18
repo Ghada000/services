@@ -6,19 +6,25 @@ const NavbarGoods = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <Link href="/home">
-            Home
-          </Link>
-        </li>
+       
         <li>
           <Link href="/exchange">
             Exchange
           </Link>
         </li>
         <li>
-          <Link href="/goods/borrow">
+          <Link href="/borrow">
             Borrow
+          </Link>
+        </li>
+        <li>
+          <Link href="/home">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link href="/addProduct">
+            add product 
           </Link>
         </li>
       </ul>

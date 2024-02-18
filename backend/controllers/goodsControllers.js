@@ -33,20 +33,24 @@ const get = function(req, res) {
         else res.status(201).json(result);
     });
   })
+const put = function (req, res) {
+  const id = req.params.id;
+  const updatedacc = req.body;
+  console.log('Updating item with ID:', id);
+  console.log('Updated data:', updatedacc);
+
+  updateacc(id, updatedacc, function (err, result) {
+    if (err) {
+      console.error('Error updating item:', err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.status(200).json(result);
+    }
+  });
+};
+
   
-  const put=( function(req, res) {
-    const id = (req.params.id); 
-    const updatedacc = req.body;
-    updateacc(id, updatedacc, function(err, result) {
-      if (err) {
-        res.status(500).send(err);
-      } else {
-        res.status(200).json(result);
-      }
-    });
-  })
-  
-   const deleted=( function(req, res) {
+  const deleted=( function(req, res) {
     const id = (req.params.id);
     deleteacc(id, function(err, result) {
       if (err) {
