@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 
 function Addproduct() {
@@ -11,6 +11,8 @@ function Addproduct() {
   });
   const [file, setFile] = useState(null);
   const [imageUrl, setImageUrl] = useState('');
+  const mapContainerRef = useRef(null);
+  let map;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,23 +22,33 @@ function Addproduct() {
     setFile(e.target.files[0]);
   };
 
-  const uploadImage = async () => {
-    const formDataCloudinary = new FormData();
-    formDataCloudinary.append('file', file);
-    formDataCloudinary.append('upload_preset', 'hibahiba11');
+  const initMap = () => {
+    map = new window.google.maps.Map(mapContainerRef.current, {
+      center: { lat: 0, lng: 0 }, // Default to center of the world
+      zoom: 8, // Adjust as needed
+    });
 
-    try {
-      const responseCloudinary = await axios.post(
-        'https://api.cloudinary.com/v1_1/dsrcopz7v/upload',
-        formDataCloudinary
-      );
-
-      setImageUrl(responseCloudinary.data.secure_url);
-      setFormData({ ...formData, image_url: responseCloudinary.data.secure_url });
-    } catch (error) {
-      console.error('Error uploading image:', error);
-    }
+    // Add click event listener to get the coordinates
+    map.addListener('click', (event) => {
+      const { lat, lng } = event.latLng.toJSON();
+      setFormData({ ...formData, location: `${lat}, ${lng}` });
+    });
   };
+
+  useEffect(() => {
+    // Load the Google Maps API script asynchronously
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    script.onload = initMap;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup the script when the component unmounts
+      document.head.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -157,14 +169,12 @@ function Addproduct() {
             onChange={handleFileChange}
             className="dd"
           />
-          <button type="button" onClick={uploadImage}>
-            Upload Image
-          </button>
         </div>
         <button type="submit" className="button-55">
           Submit
         </button>
       </form>
+      <div ref={mapContainerRef} style={{ height: '400px', width: '100%' }} />
       {imageUrl && <img src={imageUrl} alt="Uploaded" />}
     </div>
   );

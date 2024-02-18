@@ -107,7 +107,8 @@ const Exchange = () => {
           <p>Username: {item.username}</p>
           <p>Price: {item.price}</p>
           <p>Description: {item.description}</p>
-          
+          <p>location: {item.location}</p>
+
           <button onClick={() => deleteReview(item.good_id)}>Delete</button>
           <button onClick={() => handleUpdateClick(item)}>Update</button>
         </div>
