@@ -5,9 +5,10 @@ const About = () => {
   return (
     <div className="container">
       <header>
-        <h1>About Our Trading Platform</h1>
-        <p>Welcome to our trading platform where you can exchange goods and services with others in the community. Join us to discover new opportunities for trading and find what you need without spending a dime!</p>
-        <button>Embark on Luxury</button>
+        <h1>About Our  Services/Goods Platform</h1>
+        <p>
+Welcome to an unparalleled platform for expedited and optimal Borrowing/Exchanging and Services provision.</p>
+     
       </header>
 
       <section className="about-details">
@@ -16,7 +17,7 @@ const About = () => {
           <p>We are dedicated to fostering a vibrant community of traders where people can exchange a wide range of items and services. Our platform aims to facilitate fair and transparent trading experiences for all members.</p>
         </div>
         <div className="image-content">
-          <img className src="https://c1.wallpaperflare.com/preview/200/369/276/technology-developer-continents-touch.jpg"  alt="Our Team" />
+          <img className src="https://imgs.search.brave.com/bJk6-3Z4sjcQy39cc9FPLSjr7mmo50bkxOml6kJEGls/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdDUu/ZGVwb3NpdHBob3Rv/cy5jb20vMzg5MDk1/OTAvNjY2OTMvaS80/NTAvZGVwb3NpdHBo/b3Rvc182NjY5MzIw/Njgtc3RvY2stcGhv/dG8taW5zaWRlci10/cmFkaW5nLXRleHQt/d3JpdHRlbi1ub3Rl/Ym9vay5qcGc"  alt="Our Team" />
         </div>
       </section>
 
@@ -27,10 +28,10 @@ const About = () => {
         <h2 className='x'>Our Services</h2>
         <div className="service-content">
           <div className="service">
-            <img  className='img1'  src="https://e7.pngegg.com/pngimages/862/830/png-clipart-computer-icons-clothing-swap-arrow-art-angle-triangle.png" alt="Service 1" />
+            <img  className='img1'  src="https://imgs.search.brave.com/bJk6-3Z4sjcQy39cc9FPLSjr7mmo50bkxOml6kJEGls/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdDUu/ZGVwb3NpdHBob3Rv/cy5jb20vMzg5MDk1/OTAvNjY2OTMvaS80/NTAvZGVwb3NpdHBo/b3Rvc182NjY5MzIw/Njgtc3RvY2stcGhv/dG8taW5zaWRlci10/cmFkaW5nLXRleHQt/d3JpdHRlbi1ub3Rl/Ym9vay5qcGc" alt="Service 1" />
           </div>
           <div className="service">
-            <img className='img2' src="/images/service2.jpg" alt="Service 2" />
+            <img className='img2' src="https://imgs.search.brave.com/L2wk5RCzWSE6QCiWKZ9gqrfXew1n_qzmWnqvU-gGIBw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/My8xMy8xNy8yNi9l/Y29tbWVyY2UtMjE0/MDYwM182NDAuanBn" alt="Service 2" />
           </div>
         </div>
       </section>
@@ -41,15 +42,17 @@ const About = () => {
       <i class="fab fa-instagram"></i>
     </a>
     <a href="#" class="footer-icon">
-      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
     </a>
     <a href="#" class="footer-icon">
-      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
     </a>
   </div>
-  <p>Contact us: info@example.com</p>
-  <p>Follow us on social media: @example</p>
+  <p>Contact us: +216 55.789.123</p>
+ 
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-media-button">Follow us on Facebook</a>
 </footer>
+
     </div>
       </section>
     </div>

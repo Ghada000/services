@@ -24,14 +24,15 @@ module.exports = {
       });
     },
     
-     deleteacc :function (id, callback){
-        const sql='DELETE FROM `goods` WHERE `id` = ?';
-        connection.query(sql,[id], function (error, results, fields) {
-          callback(error, results);
-      })}
-      ,
-     updateacc :function (id,updatedacc ,callback){
-      const sql = 'UPDATE `goods` SET ? WHERE id= ?';
+    deleteacc :function (id, callback){
+      const sql='DELETE FROM `goods` WHERE `good_id` = ?';
+      connection.query(sql,[id], function (error, results, fields) {
+        callback(error, results);
+    })}
+    ,
+     updateacc : function (id, updatedacc, callback) {
+      console.log('Executing updateacc with ID:', id);
+      const sql = 'UPDATE `goods` SET ? WHERE good_id= ?';
       const values = [updatedacc, id];
       connection.query(sql, values, function (error, results, fields) {
         callback(error, results);

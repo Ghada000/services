@@ -1,18 +1,74 @@
 /* exchange.css */
 
-.item {
-  border: 1px solid #ddd; /* Add a border to separate items */
-  padding: 10px; /* Add some padding to each item */
-  margin: 10px; /* Add margin to create space between items */
-  display: inline-block; /* Display items in a line */
-  width: 200px; /* Set a fixed width for each item box */
+.container-goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
 }
 
-/* Optional: Add some styling for the item content */
-.item img {
-  max-width: 100%; /* Make sure images don't exceed the container width */
+.item-goods {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  max-width: 250px;
 }
 
-.item p {
-  margin: 5px 0; /* Add margin to paragraphs within the item */
+.item-goods img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
+
+.update-form-goods {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+.update-form-goods label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.update-form-goods input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: rgb(174, 133, 10);
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add any additional styling as needed */
+/* exchange.css */
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Specify your preferred font-family */
+}
+
+.container-goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: white;
+}
+
+/* Rest of your existing styles remain unchanged */

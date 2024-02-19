@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #2b2b2b;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  header p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #2b2b2b;
+    border: 2px solid #ffcc00;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+ 
+  }
+  
+  button:hover {
+    background-color: #ffbf00;
+    border-color: #ffbf00;
+    color: #fff;
+  }
+  
+  .input-container {
+    margin-bottom: 20px; /* Add margin-bottom to create space between input fields */
+  }
+  
+  input {
+    width: 50%; /* Make input fields occupy full width */
+    padding: 15px; /* Increase padding for larger input fields */
+    font-size: 1.6rem; /* Increase font size for larger input fields */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    background-color: #333; /* Add background color for better visibility */
+    color: #fff; /* Set text color to white */
+    margin-top: 20px; /* Add margin-top for spacing between input fields */
+    margin-left: 20%;
+  }
+ 

@@ -1,0 +1,74 @@
+/* exchange.css */
+
+.container-goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+  }
+  
+  .item-goods {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    max-width: 250px;
+  }
+  
+  .item-goods img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .update-form-goods {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    max-width: 250px;
+  }
+  
+  .update-form-goods label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .update-form-goods input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    background-color: rgb(174, 133, 10);
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  
+  body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Specify your preferred font-family */
+  }
+  
+  .container-goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+  }
+  
+  /* Rest of your existing styles remain unchanged */
+  
