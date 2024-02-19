@@ -1,24 +1,14 @@
 // NavbarHome.jsx
 import React from 'react';
 import Link from 'next/link';
-import { getAuth, signOut } from 'firebase/auth'; 
-import styles from './nav.css'; 
+import styles from './navhome.css'; 
 
-const NavbarHome = ({ user }) => {
+const NavbarHome = () => {
  
-  const handleSignOut = async () => {
-    const auth = getAuth(); 
-    try {
-      await signOut(auth); 
-    } catch (error) {
-      console.error('Error signing out:', error.message);
-    }
-  };
-
   return (
-    <nav className={styles.nav} >
+    <nav className={styles.nav}>
       <div>
-       
+     
         <ul className={styles.navLinks}>
           <li>
             <Link href="/services">
@@ -26,13 +16,17 @@ const NavbarHome = ({ user }) => {
             </Link>
           </li>
           <li>
-            <Link href="/GoodsPage">
+            <Link href="/goods">
               <span>Goods</span>
             </Link>
-          </li>
+          </li> 
+          <div class="left-text">
+    <Link href="/">
+      <span className={styles.homeLink}>signout</span>
+    </Link>
+  </div>
         </ul>
       </div>
-    
     </nav>
   );
 };

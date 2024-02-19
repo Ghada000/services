@@ -5,15 +5,15 @@ const About = () => {
   return (
     <div className="container">
       <header>
-        <h1>About Our Luxurious Service Exchange Platform</h1>
-        <p>Welcome to the pinnacle of elegance and sophistication! Experience unmatched service exchange tailored to the discerning connoisseur.</p>
+        <h1>About Our Trading Platform</h1>
+        <p>Welcome to our trading platform where you can exchange goods and services with others in the community. Join us to discover new opportunities for trading and find what you need without spending a dime!</p>
         <button>Embark on Luxury</button>
       </header>
 
       <section className="about-details">
         <div className="text-content">
           <h2>Who We Are?</h2>
-          <p>We are the epitome of refinement and exclusivity. Our platform connects individuals and businesses seeking the epitome of service excellence with those offering it, ensuring an unparalleled level of sophistication and luxury.</p>
+          <p>We are dedicated to fostering a vibrant community of traders where people can exchange a wide range of items and services. Our platform aims to facilitate fair and transparent trading experiences for all members.</p>
         </div>
         <div className="image-content">
           <img className src="https://c1.wallpaperflare.com/preview/200/369/276/technology-developer-continents-touch.jpg"  alt="Our Team" />
