@@ -14,7 +14,7 @@ Welcome to an unparalleled platform for expedited and optimal Borrowing/Exchangi
       <section className="about-details">
         <div className="text-content">
           <h2>Who We Are?</h2>
-          <p>We are the epitome of refinement and exclusivity. Our platform connects individuals and businesses seeking the epitome of service excellence with those offering it, ensuring an unparalleled level of sophistication.</p>
+          <p>We are dedicated to fostering a vibrant community of traders where people can exchange a wide range of items and services. Our platform aims to facilitate fair and transparent trading experiences for all members.</p>
         </div>
         <div className="image-content">
           <img className src="https://imgs.search.brave.com/bJk6-3Z4sjcQy39cc9FPLSjr7mmo50bkxOml6kJEGls/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdDUu/ZGVwb3NpdHBob3Rv/cy5jb20vMzg5MDk1/OTAvNjY2OTMvaS80/NTAvZGVwb3NpdHBo/b3Rvc182NjY5MzIw/Njgtc3RvY2stcGhv/dG8taW5zaWRlci10/cmFkaW5nLXRleHQt/d3JpdHRlbi1ub3Rl/Ym9vay5qcGc"  alt="Our Team" />

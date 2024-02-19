@@ -25,6 +25,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  background-color: white; /* Set background color to white */
 }
 
 .submit-button {
